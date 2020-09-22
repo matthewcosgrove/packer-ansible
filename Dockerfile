@@ -1,8 +1,6 @@
 FROM mattcosgrove/govc-packer
 MAINTAINER "Matthew Cosgrove <mc.matthew.cosgrove@gmail.com>"
 
-RUN apt-get install -y software-properties-common && \
+RUN apt-get install -y python3 python3-pip && \
     apt-get update && \
-    apt-add-repository ppa:ansible/ansible && \
-    apt-get update && \
-    apt-get install -y ansible
+    pip3 install ansible
